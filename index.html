@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareAI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Overlay for background contrast -->
+    <div class="overlay"></div>
+
+    <div class="container">
+        <h1>Upload Care Plan Documents</h1>
+        <div class="drop-area" id="drop-area">
+            <p>Drag and Drop the documents here or click to upload</p>
+            <input type="file" id="file-input" accept=".pdf,.docx,.doc,.txt" multiple>
+            <div id="file-list">
+                <ul id="fileNames"></ul>
+            </div>
+        </div>
+
+        <div class="submit-section">
+            <button id="submit-files">Generate Sample Care Plan</button>
+        </div>
+
+        <div class="result-section">
+            <h2>Sample Care Plan</h2>
+            <textarea id="careplan-output" placeholder="The generated care plan will appear here..." rows="10"></textarea>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script> <!-- For DOCX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script> <!-- For PDFs -->
+    <script src="app.js"></script>
+</body>
+</html>
